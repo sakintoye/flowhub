@@ -1,0 +1,16 @@
+{
+  "id": "abe6e595-1f99-429c-9a7c-1dc340dc62c5",
+  "host": "10.37.129.2",
+  "port": 3569,
+  "secret": "W&%kd70w",
+  "permissions": {
+    "W&%kd70w": [
+      "protocol:component",
+      "protocol:runtime",
+      "protocol:graph",
+      "protocol:network",
+      "component:getsource",
+      "component:setsource"
+    ]
+  }
+}

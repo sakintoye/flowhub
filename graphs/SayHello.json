@@ -1,0 +1,84 @@
+{
+    "caseSensitive": false,
+    "properties": {
+        "name": "main",
+        "environment": {
+            "type": "noflo-browser"
+        }
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "test/AddContacts_foyc": {
+            "component": "test/AddContacts",
+            "metadata": {
+                "label": "AddContacts",
+                "x": 36,
+                "y": 36,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "test/DoSomethingCool_9wd15": {
+            "component": "test/DoSomethingCool",
+            "metadata": {
+                "label": "DoSomethingCool",
+                "x": 288,
+                "y": 36,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "ajax/Get_bef1j": {
+            "component": "ajax/Get",
+            "metadata": {
+                "label": "Get",
+                "x": 144,
+                "y": 36,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "ajax/Get_bef1j",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "test/DoSomethingCool_9wd15",
+                "port": "in"
+            }
+        },
+        {
+            "src": {
+                "process": "test/AddContacts_foyc",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "ajax/Get_bef1j",
+                "port": "url"
+            }
+        },
+        {
+            "data": {
+                "name": "Ola",
+                "last_name": "Akintoye",
+                "phone": "9042369034"
+            },
+            "tgt": {
+                "process": "test/AddContacts_foyc",
+                "port": "in"
+            }
+        },
+        {
+            "data": "",
+            "tgt": {
+                "process": "ajax/Get_bef1j",
+                "port": "url"
+            }
+        }
+    ]
+}

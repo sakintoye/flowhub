@@ -1,0 +1,5 @@
+
+'{"message": "Sent from NoFlo!", "phone": "9042369034"}' -> IN Read(SendSMS) OUT -> IN Display(core/Output)
+
+
+

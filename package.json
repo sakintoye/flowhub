@@ -1,0 +1,17 @@
+{
+  "name": "my-noflo-example-app",
+  "version": "0.0.1",
+  "dependencies": {
+    "ajax-request": "^1.2.1",
+    "noflo": "^0.7.9",
+    "noflo-core": "^0.2.3",
+    "noflo-filesystem": "^1.1.1",
+    "noflo-math": "^0.1.1",
+    "noflo-nodejs": "^0.7.2"
+  },
+  "noflo": {
+    "components": {
+      "SendSMS": "components/SendSMS.coffee"
+    }
+  }
+}

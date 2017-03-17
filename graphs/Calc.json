@@ -1,0 +1,30 @@
+{
+  "processes": {
+    "Read": {
+      "component": "SendSMS"
+    },
+    "Display": {
+      "component": "core/Output"
+    }
+  },
+  "connections": [
+    {
+      "data": "{\"message\": \"Sent from NoFlo!\", \"phone\": \"9042369034\"}",
+      "tgt": {
+        "process": "Read",
+        "port": "in"
+      }
+    },
+    {
+      "src": {
+        "process": "Read",
+        "port": "out"
+      },
+      "tgt": {
+        "process": "Display",
+        "port": "in"
+      }
+    }
+  ],
+  "caseSensitive": false
+}
